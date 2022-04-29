@@ -19,3 +19,26 @@ Turno Facil busca ayudar a grupos de pacientes, medicos y secretarias en el proc
     - Secretaria: Representa los intereses de las secretarias y es asesor del proyecto buscando asegurarse de que se satisfagan las necesidades de las mismas.
 
     - Paciente: Representa los intereses de los pacientes y se asegura de que se satisfagan sus necesidades.
+
+- **User Summary:**
+    - Medico: Accede a informacion de sus turnos. *Auto representada.*  
+    - Secretaria: Accede y gestiona informacion de los turnos y medicos (horarios). *Auto representada.*
+    - Responsable de Institucion Medica: Asigna los medicos a las secretarias asi como tambien crea los usuarios de ambos. *Es representado por el Directivo de la Institucion Medica.*
+    - Paciente: Solicita turnos y accede a la informacion de los mismos. *Auto representada.*
+
+## - Needs
+- **User Needs**
+
+| Necesidad  |  Prioridad | Problema  |  Solucion Actual | Solucion Propuesta  |
+|:-:|:-:|:-:|:-:|:-:|
+| Sacar Turno  |  Alta | El sistema tradicional es lento y anticuado.  | Obtener el turno de manera presencial o por llamada telefonica.  |  Un moderno sistema tecnologico que permite sacar el turno desde la comodidad de tu hogar y seleccionando diferentes opciones. |
+| Administrar Turnos  | Alta  | Gestion manual y anticuada de un alto volumen de turnos  | Guardar los turnos en carpetas o en archivos de Excel  | Utilizar un sistema moderno que se encargue de guardar los datos de los turnos y permita la gestion integral de los mismos. |
+
+## - Product
+- Log In: Pacientes, secretarias, medicos y el responsable de la institucion medica deberán proporcionar una identificación y contraseña válidas para ingresar al sistema.
+- Sign Up: Los pacientes pueden registrarse por si mismos proporcionando la informacion necesaria y los medicos y secretarias seran registrados por el Responsable de la Institucion Medica.
+- Sacar Turno: Los pacientes pueden buscar un turno y reservarlo de manera sencilla utilizando nuestro producto.
+- Gestionar Turnos: Las secretarias podran modificar y eliminar la informacion de turnos existentes y los medicos podran consultar esta informacion.
+
+## - Business Goals
+Este proyecto reemplazara la forma tradicional de obtener y gestionar turnos medicos y propondra un nuevo sistema mas simple y con la capacidad de funcionar desde cualquier parte permitiendo una mejor experiencia de usuario.
