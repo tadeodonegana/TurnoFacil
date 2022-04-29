@@ -59,3 +59,21 @@ Guiandose con el PDF del [User Story Map](./usm.pdf).
     - Solicitar nombre de usuario y password.
 2.  Acceder a información de los turnos
     - Mostrar los detalles de los turnos.
+3. Listar turnos venideros
+    - Filtrar por turno y rango de días.
+## Responsable de Institución Médica
+1. Log In
+    - Solicitar nombre de usuario y password.
+2. Crear usuarios médicos
+    - Ingresar DNI, apellido, nombre y especialidad.
+    - Ingresar su nombre de usuario y password nuevas.
+3. Crear usuarios secretarias
+    - Ingresar DNI, apellido y nombre.
+    - Ingresar su nombre de usuario y password nuevas.
+4. Asignar médicos a secretarias
+    - Mostrar todas las secretarias de la institución.
+5. Asignar médicos a secretarias
+    - Mostrar todos los médicos de la institución.
+6. Asignar médicos a secretarias
+    - Asignar médico.
+    - Enviar lista a cada secretaria.
