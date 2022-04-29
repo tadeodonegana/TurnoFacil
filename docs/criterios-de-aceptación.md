@@ -18,3 +18,23 @@ Guiandose con el PDF del [User Story Map](./usm.pdf).
     - Filtrar por especialidad y/o obra social.
 4. Sacar Turno
     - Mostrar dias y horarios en las que atiende el medico.
+5. Sacar Turno
+    - Filtrar por rango de fechas.
+    - Filtrar por horario de turno (mañana, tarde).
+    - En caso de no haber turno en el rango, consultar si quiere ver para la otra semana.
+6. Sacar Turno
+    - Reconfirmar datos personales (menos DNI).
+    - Alertar por diferencial o si el medico no atiende por la obra social.
+7. Sacar Turno
+    - El paciente recibe un detalle del turno (también por mail).
+    - Dar la opción de imprimir.
+8. Ver Turnos
+    - Mostrar un listado con mis futuros turnos y sus detalles.
+9. Cancelar Turno
+    - Dar de baja un turno.
+    - Enviar comprobante.
+## Secretaria
+1. Log In
+    - Solicitar nombre de usuario y password.
+2. Ver grupos de medicos con los que trabaja
+    - Poder ver los médicos con los que trabaja.
