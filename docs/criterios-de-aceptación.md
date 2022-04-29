@@ -38,3 +38,24 @@ Guiandose con el PDF del [User Story Map](./usm.pdf).
     - Solicitar nombre de usuario y password.
 2. Ver grupos de medicos con los que trabaja
     - Poder ver los médicos con los que trabaja.
+3. Cargar días y horarios que trabajan los médicos
+    - Solicitar días y horarios en los que atiende cada médico .
+    - Informar pacientes.
+4. Acceder a información de los turnos
+    - Mostrar los detalles de los turnos.
+5. Cargar Turnos
+    - Que se pueda definir una franja horaria de un día determinado y la duración de cada uno.
+6. Listar turnos venideros
+    - Filtrar por médico, turno y rango de días.
+7. Listar turnos venideros
+    - Guardar configuración.
+    - Imprimir diariamente.
+8. Reagendar Turnos
+    - Se debe poder modificar el horario y la fecha.
+9. Cancelar Turnos
+    - Eliminar turno.
+## Médico
+1. Log In
+    - Solicitar nombre de usuario y password.
+2.  Acceder a información de los turnos
+    - Mostrar los detalles de los turnos.
