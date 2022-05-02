@@ -42,3 +42,6 @@ Turno Facil busca ayudar a grupos de pacientes, medicos y secretarias en el proc
 
 ## - Business Goals
 Este proyecto reemplazara la forma tradicional de obtener y gestionar turnos medicos y propondra un nuevo sistema mas simple y con la capacidad de funcionar desde cualquier parte permitiendo una mejor experiencia de usuario.
+
+## - Mision
+Turno Facil busca ayudar a grupos de pacientes en la obtencion de turnos medicos de una manera agil y sencilla permitiendo reservarlos desde cualquier dispositivo en cualquier momento. La plataforma tambien permite que medicos puedan ofrecer sus servicios de una manera novedosa y que las secretarias puedan gestionar los turnos de una forma mas eficiente.
