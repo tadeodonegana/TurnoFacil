@@ -107,3 +107,42 @@ El caso de uso comienza cuando el paciente quiere seleccionar un turno.
 ## Suposiciones
 1. Se supone que el paciente se encuentra logueado.
 2. Se supone que la lista de turnos disponibles está actualizada.
+
+## Nombre: Confirmar Turno
+
+## Descripción
+Esta funcionalidad del sistema permite confirmar un turno y ser notificado de ello.
+
+## Actor primario
+Paciente
+
+## Actores secundarios
+No posee
+
+## Trigger
+El caso de uso comienza cuando el paciente quiere confirmar un turno y ser notificado de ello.
+
+## Caso de uso curso básico
+1. El caso de uso comienza cuando el paciente quiere confirmar un turno y ser notificado de ello.
+2. El sistema pide reconfirmar nombre, apellido, dirección, teléfono, email, obra social y número de asociado.
+3. El paciente reconfirma nombre, apellido, dirección, teléfono, email, obra social y número de asociado.
+4. El sistema verifica que el nombre, apellido, dirección, teléfono, email, obra social y número de asociado coincidan con el DNI del paciente. 
+5. El paciente confirma el turno.
+6. El sistema envía un mail notificando la confirmación del turno.
+7. El sistema pregunta si el paciente quiere imprimir un archivo con los detalles de la confirmación del turno.
+8. El paciente confirma si quiere imprimir un archivo con los detalles de la confirmación del turno.
+
+## Casos de uso curso alternativo
+
+4 El sistema verifica que el nombre, apellido, dirección, teléfono, email, obra social y número de asociado coincidan con el DNI del paciente. 
+- 4.1 El sistema informa que existe algún dato correspondiente al nombre, apellido, dirección, teléfono, email, obra social y/o número de asociado reingresado que no coincide con el DNI del paciente.
+- 4.2 El sistema pide nuevamente reconfirmar nombre, apellido, dirección, teléfono, email, obra social y número de asociado.
+- 4.3 El paciente reconfirma nombre, apellido, dirección, teléfono, email, obra social y número de asociado.
+- 4.4 Ir paso 4.
+
+8 El paciente confirma si quiere imprimir un archivo con los detalles de la confirmación del turno.
+- 8.1 El sistema imprime un archivo con los detalles de la confirmación del turno si el paciente eligió imprimirlo.
+- 8.2 Fin caso de uso.
+
+## Suposiciones
+1. Se supone que el paciente se encuentra logueado.
