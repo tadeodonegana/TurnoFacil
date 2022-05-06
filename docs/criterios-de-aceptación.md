@@ -17,7 +17,7 @@ Guiandose con el PDF del [User Story Map](./usm.pdf).
     - Mostrar listado medicos.
     - Filtrar por especialidad y/o obra social.
 4. Sacar Turno
-    - Al seleccionar un médico mostrar dias y horarios en las que atiende el medico.
+    - Al seleccionar un médico, mostrar dias y horarios en los que atiende el medico.
 5. Sacar Turno
     - Filtrar por rango de fechas.
     - Filtrar por horario de turno (mañana, tarde).
