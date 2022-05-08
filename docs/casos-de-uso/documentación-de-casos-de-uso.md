@@ -19,6 +19,7 @@ El caso de uso comienza cuando el paciente quiere buscar un médico.
 2. El sistema pide seleccionar los criterios de filtrado (especialidad y/o obra social).
 3. El paciente selecciona los criterios de filtrado (especialidad y/o obra social).
 4. El sistema muestra los médicos que cumplen con los criterios de filtrado seleccionados.
+5. Fin del caso de uso.
 
 ## Suposiciones
 1. Se supone que el paciente se encuentra logueado.
@@ -42,6 +43,7 @@ El caso de uso comienza cuando el paciente quiere seleccionar un médico.
 1. El caso de uso comienza cuando el paciente quiere seleccionar un médico.
 2. El paciente selecciona un médico.
 3. El sistema muestra los días y horarios en los que atiende el médico.
+4. Fin del caso de uso.
 
 ## Suposiciones
 1. Se supone que el paciente se encuentra logueado.
@@ -68,6 +70,7 @@ El caso de uso comienza cuando el paciente quiere buscar un turno.
 3. El paciente selecciona los criterios de filtrado (rango de fechas y horario de turno, pudiendo ser mañana y/o tarde).
 4. El sistema muestra los turnos que cumplen con los criterios de filtrado seleccionados.
 5. El sistema verifica que hay turnos disponibles de acuerdo a los criterios de filtrado seleccionados.
+6. Fin del caso de uso.
 
 ## Casos de uso curso alternativo
 5 El sistema verifica que hay turnos disponibles de acuerdo a los criterios de filtrado seleccionados.
@@ -98,6 +101,7 @@ El caso de uso comienza cuando el paciente quiere seleccionar un turno.
 1. El caso de uso comienza cuando el paciente quiere seleccionar un turno.
 2. El paciente selecciona un turno disponible.
 3. El sistema verifica que el médico atiende por la obra social del paciente y si hay diferencial.
+4. Fin del caso de uso.
 
 ## Casos de uso curso alternativo
 3 El sistema verifica que el médico atiende por la obra social del paciente y si hay diferencial.
@@ -131,6 +135,7 @@ El caso de uso comienza cuando el paciente quiere confirmar un turno y ser notif
 6. El sistema envía un mail notificando la confirmación del turno.
 7. El sistema pregunta si el paciente quiere imprimir un archivo con los detalles de la confirmación del turno.
 8. El paciente confirma si quiere imprimir un archivo con los detalles de la confirmación del turno.
+9. Fin del caso de uso.
 
 ## Casos de uso curso alternativo
 
