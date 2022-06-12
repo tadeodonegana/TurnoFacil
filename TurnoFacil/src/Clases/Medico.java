@@ -22,6 +22,14 @@ public class Medico {
 		return obrasSociales.contains(os);
 	}
 	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public String getEspecialidad() {
+		return especialidad;
+	}
+	
 	@Override
 	public String toString() {
 		return "Nombre: " + nombre + " - Apellido: " + apellido + " - Especialidad: " + especialidad;
