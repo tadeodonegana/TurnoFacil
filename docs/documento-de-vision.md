@@ -10,8 +10,6 @@ Turno Facil busca ayudar a grupos de pacientes, medicos y secretarias en el proc
 ##  - Target Group
 - **Stakeholder Summary:**
 
-    - Fundador de Turno Facil: Representa al creador original de la idea del producto y se encarga de realizar el seguimiento del proyecto y de proveer fondos para el desarrollo del mismo.
-
     - Directivo de Institucion Medica: Representa a una Institucion Medica (hospital, clinica, etc), es asesor y cliente del producto.
 
     - Medico: Representa los intereses de los medicos y es asesor del proyecto.
