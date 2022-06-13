@@ -1,5 +1,7 @@
 package Apps;
 
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
 import java.util.ArrayList;
 import Clases.*;
 import Filtros.*;
@@ -16,7 +18,73 @@ public class AppPaciente {
 		this.sistema = sistema;
 	}
 	
-	public void sacarTurno(FiltroMedico fm, FiltroTurno ft) {
+	private int elegir() {
+		int eleccion = -1;
+		while (eleccion < 1 || eleccion > 4) {
+			System.out.println("Ingrese la opcion: ");
+			eleccion = sc.nextInt();
+			if (eleccion < 1 || eleccion > 4)
+				System.out.println("Ha ingresado una opcion invalida, vuelva a intentarlo");
+		}
+		return eleccion;
+	}
+	
+	private FiltroMedico MenuFiltroMedico() {
+		System.out.println("A continuacion podra indicar si desea filtrar los medicos por nombre y apellido(1), especialidad(2), obra social(3) o ningun criterio(4)");
+		int eleccion = elegir();
+		switch(eleccion) {
+		case 1: {
+			System.out.println("Ingrese el nombre y apellido: ");
+			String nombre = sc.nextLine();
+			return new FiltroNombre(nombre);
+			}
+		case 2: {
+			System.out.println("Ingrese la especialidad: ");
+			String especialidad = sc.nextLine();
+			return new FiltroEspecialidad(especialidad);
+			}
+		case 3: {
+			System.out.println("Ingrese el nombre de la obra social: ");
+			String obra_social = sc.nextLine();
+			return new FiltroObraSocial(obra_social);
+			}
+		case 4: return null;
+		}
+		return null;
+	}
+	
+	private FiltroTurno MenuFiltroTurno() {
+		System.out.println("A continuacion podra indicar si desea filtrar los turnos por turno mañana(1), turno tarde(2), rango de fechas(3) o ningun criterio(4)");
+		int eleccion = elegir();
+		switch(eleccion) {
+		case 1: return new FiltroTurnoManiana();
+		case 2: return new FiltroTurnoTarde();
+		case 3: {
+			System.out.println("Ingrese el dia de la fecha inferior: ");
+			int dia_fecha = sc.nextInt();
+			System.out.println("Ingrese el mes de la fecha inferior: ");
+			int mes_fecha = sc.nextInt();
+			System.out.println("Ingrese el mes de la fecha inferior: ");
+			int anio_fecha = sc.nextInt();
+			LocalDateTime fecha_inferior = LocalDateTime.of(anio_fecha, mes_fecha, dia_fecha, 0, 0);
+			System.out.println("Ingrese la fecha superior: ");
+			System.out.println("Ingrese el dia de la fecha superior: ");
+			dia_fecha = sc.nextInt();
+			System.out.println("Ingrese el mes de la fecha superior: ");
+			mes_fecha = sc.nextInt();
+			System.out.println("Ingrese el mes de la fecha superior: ");
+			anio_fecha = sc.nextInt();
+			LocalDateTime fecha_superior = LocalDateTime.of(anio_fecha, mes_fecha, dia_fecha, 23, 59);
+			return new FiltroRangoFechas(fecha_inferior, fecha_superior);
+			}
+		case 4: return null;
+		}
+		return null;
+	}
+	
+	public void sacarTurno() {
+		FiltroMedico fm = MenuFiltroMedico();
+		FiltroTurno ft = MenuFiltroTurno();
 		ArrayList<ParMedicoTurnos> resultado_filtrado = sistema.buscarParesMedicoTurnos(fm, ft);
 		if (resultado_filtrado != null) {
 			ArrayList<Medico> medicos = new ArrayList<Medico>();
