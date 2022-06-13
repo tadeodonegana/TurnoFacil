@@ -6,14 +6,13 @@ import Filtros.*;
 import java.util.Scanner;
 
 public class AppPaciente {
-	private static ArrayList<Paciente> listaPacientes = null;
-	private Paciente pacienteActivo;
+	private static ArrayList<Paciente> listaPacientes = new ArrayList<>();
+	private Paciente pacienteActivo = null;
 	private SistemaGeneralClinica sistema;
 	private static Scanner sc = new Scanner(System.in);
 	
 	public AppPaciente(SistemaGeneralClinica sistema) {
 		assert(sistema != null);
-		this.pacienteActivo = null;
 		this.sistema = sistema;
 	}
 	
@@ -66,22 +65,22 @@ public class AppPaciente {
 	}
 	
 	public boolean confirmaTurno() {
-		System.out.println("Ingresar Nombre");
+		System.out.println("Ingresar Nombre: ");
 		String nombre = sc.nextLine();
-		System.out.println("Ingresar Apellido");
+		System.out.println("Ingresar Apellido: ");
 		String apellido = sc.nextLine();
-		System.out.println("Ingresar Direccion");
+		System.out.println("Ingresar Direccion: ");
 		String direccion = sc.nextLine();
-		System.out.println("Ingresar Email");
+		System.out.println("Ingresar Email: ");
 		String email = sc.nextLine();
-		System.out.println("Ingresar Telefono");
+		System.out.println("Ingresar Telefono: ");
 		String telefono = sc.nextLine();
-		System.out.println("Ingresar Numero de Afiliado");
+		System.out.println("Ingresar Numero de Afiliado: ");
 		int numAfiliado = sc.nextInt();
 		if (nombre == pacienteActivo.getNombre() && apellido == pacienteActivo.getApellido() && direccion == pacienteActivo.getDireccion() && email == pacienteActivo.getEmail() && telefono == pacienteActivo.getTelefono() && numAfiliado == pacienteActivo.getNumAfiliado()) {
 			ObraSocial obra = pacienteActivo.getObraSocial();
 			if (obra != null) {
-				System.out.println("Ingresar Obra Social");
+				System.out.println("Ingresar Obra Social: ");
 				String obraSocial = sc.nextLine();
 				if (obra.getNombre() == obraSocial)
 					return true;
@@ -90,6 +89,14 @@ public class AppPaciente {
 				return true;
 		}
 		return false;
+	}
+	
+	public void enviarMail() {
+		System.out.println("Se han enviado los detalles del turno por mail");
+	}
+	
+	public void imprimir(Turno turno) {
+		System.out.println(turno.toString());
 	}
 	
 	private void alertar(Turno turno_seleccionado) {
@@ -109,4 +116,5 @@ public class AppPaciente {
 		else
 			System.out.println("ADVERTENCIA: Usted no posee obra social, por lo que debera abonar el costo total del turno");
 	}
+	
 }

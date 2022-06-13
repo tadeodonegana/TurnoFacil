@@ -49,6 +49,7 @@ public class Turno {
 	
 	@Override
 	public String toString() {
-		return "Fecha y hora: " + fecha;
+		return "Fecha y Hora=" + fecha + ", Medico=" + medico + ", Costo=" + costo;
 	}
+	
 }
