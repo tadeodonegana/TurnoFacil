@@ -6,8 +6,8 @@ import Clases.ObraSocial;
 public class FiltroObraSocial extends FiltroMedico{
 	private ObraSocial obraSocial;
 	
-	public FiltroObraSocial(ObraSocial obraSocial) {
-		this.obraSocial = obraSocial;
+	public FiltroObraSocial(String nombreOS) {
+		this.obraSocial = new ObraSocial(nombreOS,0);
 	}
 	
 	public boolean cumple(Medico medico) {
