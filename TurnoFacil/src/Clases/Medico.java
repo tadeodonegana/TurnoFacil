@@ -22,8 +22,8 @@ public class Medico {
 		return obrasSociales.contains(os);
 	}
 	
-	public String getNombre() {
-		return nombre;
+	public String getNombreYApellido() {
+		return nombre + " " + apellido;
 	}
 	
 	public String getEspecialidad() {
