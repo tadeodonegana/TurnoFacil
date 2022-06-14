@@ -16,7 +16,7 @@ public class ParMedicoTurnos {
 		return medico;
 	}
 	
-	public ArrayList<Turno> getTurnosDisponibles() {
+	public ArrayList<Turno> getTurnos() {
 		return turnos;
 	}
 	

@@ -23,7 +23,7 @@ public class Secretaria {
 			Medico medico = par.getMedico();
 			if (fm.cumple(medico)) {
 				ParMedicoTurnos p = new ParMedicoTurnos(medico);
-				ArrayList<Turno> turnos = par.getTurnosDisponibles();
+				ArrayList<Turno> turnos = par.getTurnos();
 				for (Turno turno: turnos)
 					if (ft.cumple(turno) && turno.getPaciente() == null)
 						p.addTurno(turno);
