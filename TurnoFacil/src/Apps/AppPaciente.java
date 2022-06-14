@@ -1,7 +1,6 @@
 package Apps;
 
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDateTime;
 import java.util.ArrayList;
 import Clases.*;
 import Filtros.*;
@@ -55,7 +54,7 @@ public class AppPaciente {
 	}
 	
 	private FiltroTurno MenuFiltroTurno() {
-		System.out.println("A continuacion podra indicar si desea filtrar los turnos por turno mañana(1), turno tarde(2), rango de fechas(3) o ningun criterio(4)");
+		System.out.println("A continuacion podra indicar si desea filtrar los turnos por turno maï¿½ana(1), turno tarde(2), rango de fechas(3) o ningun criterio(4)");
 		int eleccion = elegir();
 		switch(eleccion) {
 		case 1: return new FiltroTurnoManiana();
@@ -98,14 +97,20 @@ public class AppPaciente {
 			for (ParMedicoTurnos par: resultado_filtrado)
 				medicos.add(par.getMedico());
 			int posicion_medico = this.seleccionarMedico(medicos);
-			Turno turno_seleccionado = this.seleccionarTurno(resultado_filtrado.get(posicion_medico).getTurnosDisponibles());
-			if (confirmaTurno()) {
-				turno_seleccionado.setPaciente(pacienteActivo);
-				pacienteActivo.addTurno(turno_seleccionado);
-				this.alertar(turno_seleccionado);
+			ArrayList<Turno> listaTurnos = resultado_filtrado.get(posicion_medico).getTurnos();
+			if (!listaTurnos.isEmpty()) {
+				Turno turno_seleccionado = this.seleccionarTurno(listaTurnos);
+				if (confirmaTurno()) {
+					turno_seleccionado.setPaciente(pacienteActivo);
+					pacienteActivo.addTurno(turno_seleccionado);
+					this.alertar(turno_seleccionado);
+				}
+				else
+					System.out.println("Los datos ingresados son incorrectos");
 			}
-			else
-				System.out.println("Los datos ingresados son incorrectos");
+			else {
+				System.out.println("No hay turnos disponibles para el medico seleccionado");
+			}
 		}
 		else
 			System.out.println("Ningun medico cumple con el criterio indicado");
