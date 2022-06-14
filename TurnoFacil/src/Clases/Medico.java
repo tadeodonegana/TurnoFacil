@@ -30,6 +30,10 @@ public class Medico {
 		return especialidad;
 	}
 	
+	public ArrayList<JornadaDiaria> getJornadas(){
+		return new ArrayList<JornadaDiaria>(jornadas);
+	}
+	
 	@Override
 	public String toString() {
 		return "Nombre: " + nombre + " - Apellido: " + apellido + " - Especialidad: " + especialidad;

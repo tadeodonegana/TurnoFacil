@@ -118,10 +118,19 @@ public class AppPaciente {
 		while (true) {
 			System.out.println("Seleccione un medico de la lista (ingrese un numero entre 1 " + "y " + medicos.size() + ")");
 			int eleccion = sc.nextInt();
+<<<<<<< HEAD
+			if (eleccion >= 1 && eleccion <= medicos.size()) {
+				ArrayList<JornadaDiaria> imprimir = medicos.get(eleccion-1).getJornadas();
+				System.out.println("Dias y Horarios que trabaja el médico" + " " + medicos.get(eleccion-1).getNombreYApellido());
+				for(JornadaDiaria jd: imprimir) {
+					System.out.println(jd.toString());
+				}
+=======
 			sc.nextLine();
 			if (eleccion >= 1 && eleccion <= medicos.size())
+>>>>>>> e3ab4208ccc7c9f7f889e54b9f7798de529db640
 				return eleccion-1;
-			else
+			} else
 				System.out.println("Ingreso un valor invalido, por favor vuelva a intentarlo");
 		}
 	}
@@ -194,5 +203,4 @@ public class AppPaciente {
 		else
 			System.out.println("ADVERTENCIA: Usted no posee obra social, por lo que debera abonar el costo total del turno");
 	}
-	
 }
