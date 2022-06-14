@@ -23,6 +23,7 @@ public class AppPaciente {
 		while (eleccion < 1 || eleccion > 4) {
 			System.out.println("Ingrese la opcion: ");
 			eleccion = sc.nextInt();
+			sc.nextLine();
 			if (eleccion < 1 || eleccion > 4)
 				System.out.println("Ha ingresado una opcion invalida, vuelva a intentarlo");
 		}
@@ -62,18 +63,24 @@ public class AppPaciente {
 		case 3: {
 			System.out.println("Ingrese el dia de la fecha inferior: ");
 			int dia_fecha = sc.nextInt();
+			sc.nextLine();
 			System.out.println("Ingrese el mes de la fecha inferior: ");
 			int mes_fecha = sc.nextInt();
+			sc.nextLine();
 			System.out.println("Ingrese el mes de la fecha inferior: ");
 			int anio_fecha = sc.nextInt();
+			sc.nextLine();
 			LocalDateTime fecha_inferior = LocalDateTime.of(anio_fecha, mes_fecha, dia_fecha, 0, 0);
 			System.out.println("Ingrese la fecha superior: ");
 			System.out.println("Ingrese el dia de la fecha superior: ");
 			dia_fecha = sc.nextInt();
+			sc.nextLine();
 			System.out.println("Ingrese el mes de la fecha superior: ");
 			mes_fecha = sc.nextInt();
+			sc.nextLine();
 			System.out.println("Ingrese el mes de la fecha superior: ");
 			anio_fecha = sc.nextInt();
+			sc.nextLine();
 			LocalDateTime fecha_superior = LocalDateTime.of(anio_fecha, mes_fecha, dia_fecha, 23, 59);
 			return new FiltroRangoFechas(fecha_inferior, fecha_superior);
 			}
@@ -86,7 +93,7 @@ public class AppPaciente {
 		FiltroMedico fm = MenuFiltroMedico();
 		FiltroTurno ft = MenuFiltroTurno();
 		ArrayList<ParMedicoTurnos> resultado_filtrado = sistema.buscarParesMedicoTurnos(fm, ft);
-		if (resultado_filtrado != null) {
+		if (resultado_filtrado.size() > 0) {
 			ArrayList<Medico> medicos = new ArrayList<Medico>();
 			for (ParMedicoTurnos par: resultado_filtrado)
 				medicos.add(par.getMedico());
@@ -109,14 +116,19 @@ public class AppPaciente {
 		for (int i = 0; i < medicos.size(); i++)
 			System.out.println(i+1 + "- " + medicos.get(i));
 		while (true) {
-			System.out.println("Seleccione un medico de la lista (ingrese un numero entre 1 " + "y " + medicos.size());
+			System.out.println("Seleccione un medico de la lista (ingrese un numero entre 1 " + "y " + medicos.size() + ")");
 			int eleccion = sc.nextInt();
+<<<<<<< HEAD
 			if (eleccion >= 1 && eleccion <= medicos.size()) {
 				ArrayList<JornadaDiaria> imprimir = medicos.get(eleccion-1).getJornadas();
 				System.out.println("Dias y Horarios que trabaja el médico" + " " + medicos.get(eleccion-1).getNombreYApellido());
 				for(JornadaDiaria jd: imprimir) {
 					System.out.println(jd.toString());
 				}
+=======
+			sc.nextLine();
+			if (eleccion >= 1 && eleccion <= medicos.size())
+>>>>>>> e3ab4208ccc7c9f7f889e54b9f7798de529db640
 				return eleccion-1;
 			} else
 				System.out.println("Ingreso un valor invalido, por favor vuelva a intentarlo");
@@ -128,8 +140,9 @@ public class AppPaciente {
 		for (int i = 0; i < turnos.size(); i++)
 			System.out.println(i+1 + "- " + turnos.get(i));
 		while (true) {
-			System.out.println("Seleccione un medico de la lista (ingrese un numero entre 1 " + "y " + turnos.size());
+			System.out.println("Seleccione un medico de la lista (ingrese un numero entre 1 " + "y " + turnos.size() + ")");
 			int eleccion = sc.nextInt();
+			sc.nextLine();
 			if (eleccion >= 1 && eleccion <= turnos.size())
 				return turnos.get(eleccion-1);
 			else
@@ -150,12 +163,13 @@ public class AppPaciente {
 		String telefono = sc.nextLine();
 		System.out.println("Ingresar Numero de Afiliado: ");
 		int numAfiliado = sc.nextInt();
-		if (nombre == pacienteActivo.getNombre() && apellido == pacienteActivo.getApellido() && direccion == pacienteActivo.getDireccion() && email == pacienteActivo.getEmail() && telefono == pacienteActivo.getTelefono() && numAfiliado == pacienteActivo.getNumAfiliado()) {
+		sc.nextLine();
+		if (nombre.equals(pacienteActivo.getNombre()) && apellido.equals(pacienteActivo.getApellido()) && direccion.equals(pacienteActivo.getDireccion()) && email.equals(pacienteActivo.getEmail()) && telefono.equals(pacienteActivo.getTelefono()) && numAfiliado == pacienteActivo.getNumAfiliado()) {
 			ObraSocial obra = pacienteActivo.getObraSocial();
 			if (obra != null) {
 				System.out.println("Ingresar Obra Social: ");
 				String obraSocial = sc.nextLine();
-				if (obra.getNombre() == obraSocial)
+				if (obra.getNombre().equals(obraSocial))
 					return true;
 			}
 			else

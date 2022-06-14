@@ -25,7 +25,7 @@ public class ObraSocial {
 	public boolean equals(Object obj) {
 		try {
 			ObraSocial o = (ObraSocial) obj;
-			return (this.nombre == o.getNombre());
+			return (this.nombre.equals(o.getNombre()));
 		}
 		catch(Exception e) {
 			return false;
