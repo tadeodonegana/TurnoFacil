@@ -17,6 +17,11 @@ public class AppPaciente {
 		this.sistema = sistema;
 	}
 	
+	public void addPacienteActivo(Paciente p) {
+		if (p != null)
+			pacienteActivo = p;
+	}
+	
 	private int elegir() {
 		int eleccion = -1;
 		while (eleccion < 1 || eleccion > 4) {
