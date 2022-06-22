@@ -17,15 +17,30 @@ public class Secretaria {
 		this.servicios = new ArrayList<ParMedicoTurnos>();
 	}
 	
+	public void addMedico(Medico m) {
+		if (m != null && ! servicios.contains(m)) {
+			servicios.add(new ParMedicoTurnos(m));
+		}
+	}
+	
+	public void addTurno(Medico m, Turno t) {
+		if (m != null && t != null) {
+			int i = servicios.indexOf(new ParMedicoTurnos(m));
+			if (i > -1) {
+				this.servicios.get(i).addTurno(t);
+			}
+		}
+	}
+	
 	public ArrayList<ParMedicoTurnos> buscarParesMedicoTurnos(FiltroMedico fm, FiltroTurno ft) {
 		ArrayList<ParMedicoTurnos> resultado_filtrado = new ArrayList<ParMedicoTurnos>();
 		for (ParMedicoTurnos par: servicios) {
 			Medico medico = par.getMedico();
-			if (fm.cumple(medico)) {
+			if (fm == null || fm.cumple(medico)) {
 				ParMedicoTurnos p = new ParMedicoTurnos(medico);
 				ArrayList<Turno> turnos = par.getTurnos();
 				for (Turno turno: turnos)
-					if (ft.cumple(turno) && turno.getPaciente() == null)
+					if ((ft == null || ft.cumple(turno)) && turno.getPaciente() == null)
 						p.addTurno(turno);
 				resultado_filtrado.add(p);
 			}

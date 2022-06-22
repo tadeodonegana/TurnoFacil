@@ -1,6 +1,7 @@
 package Clases;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ParMedicoTurnos {
 	private Medico medico;
@@ -23,5 +24,17 @@ public class ParMedicoTurnos {
 	public void addTurno(Turno t) {
 		if (!turnos.contains(t))
 			turnos.add(t);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ParMedicoTurnos other = (ParMedicoTurnos) obj;
+		return this.medico.equals(other.getMedico());
 	}
 }
