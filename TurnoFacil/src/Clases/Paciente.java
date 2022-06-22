@@ -12,6 +12,7 @@ public class Paciente {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
+		this.email = email;
 		this.telefono = telefono;
 		this.DNI = DNI;
 		this.numAfiliado = numAfiliado;

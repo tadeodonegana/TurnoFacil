@@ -1,14 +1,14 @@
 package Clases;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class JornadaDiaria {
 	
 	public String diaDeSemana;
-	public LocalDateTime horaInicio;
-	public LocalDateTime horaFin;
+	public LocalTime horaInicio;
+	public LocalTime horaFin;
 	
-	public JornadaDiaria(String diaDeSemana, LocalDateTime horaInicio, LocalDateTime horaFin) {
+	public JornadaDiaria(String diaDeSemana, LocalTime horaInicio, LocalTime horaFin) {
 		super();
 		this.diaDeSemana = diaDeSemana;
 		this.horaInicio = horaInicio;
@@ -19,11 +19,11 @@ public class JornadaDiaria {
 		return diaDeSemana;
 	}
 
-	public LocalDateTime getHoraInicio() {
+	public LocalTime getHoraInicio() {
 		return horaInicio;
 	}
 
-	public LocalDateTime getHoraFin() {
+	public LocalTime getHoraFin() {
 		return horaFin;
 	}
 

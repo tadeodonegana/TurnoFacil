@@ -1,6 +1,7 @@
 package Clases;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Medico {
 	private String nombre, apellido, especialidad, usuario, clave;
@@ -34,9 +35,32 @@ public class Medico {
 		return new ArrayList<JornadaDiaria>(jornadas);
 	}
 	
+	public void addJornada(JornadaDiaria j) {
+		if (j != null) {
+			this.jornadas.add(j);
+		}
+	}
+	
+	public void addOS(ObraSocial os) {
+		if (os != null && ! this.obrasSociales.contains(os)) {
+			this.obrasSociales.add(os);
+		}		
+	}
+
 	@Override
 	public String toString() {
 		return "Nombre: " + nombre + " - Apellido: " + apellido + " - Especialidad: " + especialidad;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Medico other = (Medico) obj;
+		return DNI == other.DNI;
+	}
 }
