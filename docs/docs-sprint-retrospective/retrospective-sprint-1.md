@@ -1,15 +1,15 @@
 # Restrospective Sprint 1
 
-## ¿Que hicimos mal? 
+## ¿Qué hicimos mal? 
 
 - Poca organización al momento de realizar la implementación del código.
-- No respetamos algunos puntos del criterio de done.
+- No respetamos algunos puntos del criterio de done, particularmente los relacionados a agregar comentarios descriptivos a cada método en el código y a realizar commits con comentarios representativos.
 
-## ¿Que hicimos bien?
+## ¿Qué hicimos bien?
  
 - Buena división de user stories, tareas y commits.
 - Buena documentación de las daily scrum.
 
-## ¿Que se puede mejorar?
+## ¿Qué se puede mejorar?
 - Cumplimiento del criterio de done en lo que respecta a agregar comentarios descriptivos a cada método en el código y a realizar commits representativos.
-- Mejor organización general.
+- Mejor organización para las daily scrum y para la implementación del código.
