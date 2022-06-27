@@ -4,7 +4,7 @@
 
 - Poca Puntualidad para las reuniones.
 
-## ¿Que hicimos mal?
+## ¿Que hicimos bien?
  
 - Comunicacion constante y fluida.
 - Flujo de trabajo activo y coordinado.
