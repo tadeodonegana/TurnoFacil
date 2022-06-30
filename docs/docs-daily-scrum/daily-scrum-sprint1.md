@@ -1,4 +1,4 @@
-# Documentacion Daily Scrum
+# Documentacion Daily Scrum - Sprint 1
 
 ## Reunión del 20/05
 En esta daily scrum se trato el tema de la correcion de errores pendientes de warm up, planteando los incovenientes correspondientes (Como por ejemplo dificultades para indentificar el mvp en el user story mapping), comentando que se hizo el dia anterior y que se hara para el dia siguiente.
