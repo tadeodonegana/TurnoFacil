@@ -21,6 +21,17 @@ public class ParMedicoTurnos {
 		return turnos;
 	}
 	
+	public boolean poseeTurnoQueCruza(Turno turno) {//este método sirve para identificar si a la hora de agregar un turno se cruza con otro del mismo medico
+		int i = 0;
+		while (i < turnos.size()) {
+			if (turnos.get(i).seCruzaCon(turno))
+				return true;
+			else
+				i++;
+		}
+		return false;
+	}
+	
 	public void addTurno(Turno t) {
 		if (!turnos.contains(t))
 			turnos.add(t);
