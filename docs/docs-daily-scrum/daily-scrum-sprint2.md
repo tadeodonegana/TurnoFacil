@@ -7,3 +7,5 @@ Se trató el tema del inicio a la implementación de la funcionalidad y el desar
 Se trató el tema de la solución de los errores del Sprint anterior, además de la continuación en el desarrollo del código.
 
 
+## Reunión del 3/7
+Se trató el tema del diagrama de sucuencia y se hablo de como desarrollar el testing del programa
