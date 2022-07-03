@@ -13,7 +13,7 @@
 ## Caso N°2 No hay turnos disponibles
 | Item  |  Datos del Sistema | Datos de Entrada  |  Salida Esperada | Salida Obtenida | Comentario(Opcional) |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|1|Médico seleccionado y lista de turnos |Se tiene un médico seleccionado y se pide filtrar por turnos de mañana|Turnos disponibles en la semana próxima | Se muestra por pantalla "No hay turnos disponibles para el medico seleccionado" | 
+|1|Médico seleccionado y lista de turnos |Se tiene un médico seleccionado y se pide filtrar rango de fecha|Turnos disponibles en la semana próxima | Turnos disponibles en la semana próxima | 
 
 ## Comentarios Generales:
         
