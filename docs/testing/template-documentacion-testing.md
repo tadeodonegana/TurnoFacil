@@ -1,6 +1,6 @@
 # Documento de casos de testing | Sprint Nro
 
-## Descricion:
+## Descripcion:
         Casos de test documentados para la tarea X...
 
 # Casos de Test:
