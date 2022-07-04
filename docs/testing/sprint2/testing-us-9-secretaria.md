@@ -1,4 +1,4 @@
-# Documento de casos de testing | Sprint Nro
+# Documento de casos de testing | Sprint 2
 
 ## Descripcion:
         Descripción de la user story "Como Secretaria quiero borrar un turno para dar de baja el mismo"
