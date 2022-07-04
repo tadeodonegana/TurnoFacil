@@ -13,7 +13,7 @@ public class ObraSocial {
 		this.pacientes = new ArrayList<Paciente>();
 	}
 	
-	public String getNombre() {
+	public String getNombre() { 
 		return nombre;
 	}
 	
@@ -22,7 +22,7 @@ public class ObraSocial {
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) { //Verifica que dos ObraSociales sean iguales a partir de su nombre
 		try {
 			ObraSocial o = (ObraSocial) obj;
 			return (this.nombre.equals(o.getNombre()));
