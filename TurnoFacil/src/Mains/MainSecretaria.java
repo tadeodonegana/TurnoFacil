@@ -2,7 +2,6 @@ package Mains;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import Apps.AppSecretaria;
 import Clases.*;
 
@@ -10,8 +9,8 @@ public class MainSecretaria {
 	
 	private static Scanner sc = new Scanner(System.in);
 	
-	private static AppSecretaria crearApp(Secretaria sec) { //método privado para crear y retornar una instancia de AppSecretaria necesaria para el testeo
-		//Médicos
+	private static AppSecretaria crearApp(Secretaria sec) { //mï¿½todo privado para crear y retornar una instancia de AppSecretaria necesaria para el testeo
+		//Mï¿½dicos
 		Medico m1 = new Medico("Hector","Salamanca","Traumatologia","HSal","1563",965874);
 		Medico m2 = new Medico("Mariana","Lopez","Cardiologia","MLop","1472",126578);
 		Medico m3 = new Medico("Aaron","Perez","Odontologia","APez","1225",167943);
@@ -25,11 +24,11 @@ public class MainSecretaria {
 		return app;
 	}
 
-	public static void main(String[] args) { //main de la Secretaria que permite utilizar los métodos de la AppSecretaria a través de un menú y con el mismo testear el código
+	public static void main(String[] args) { //main de la Secretaria que permite utilizar los mï¿½todos de la AppSecretaria a travï¿½s de un menï¿½ y con el mismo testear el cï¿½digo
 		System.out.println("*************** Turno Facil Secretaria ***************");
 		//Secretaria
 		Secretaria sec = new Secretaria("Patricia", "Suarez", "xxxx", "xxxx", 14758);
-		AppSecretaria app = crearApp(sec); //crearApp recibe la Secretaria sec por parámetro para que luego se puedan invocar métodos de la misma para el testeo
+		AppSecretaria app = crearApp(sec); //crearApp recibe la Secretaria sec por parï¿½metro para que luego se puedan invocar mï¿½todos de la misma para el testeo
 		int eleccion = 1;
 		while (eleccion < 4 && eleccion > 0) {
 			System.out.println("=========> Menu <=========");
@@ -48,10 +47,10 @@ public class MainSecretaria {
 							if (jornadas.size() > 0) {
 								System.out.println("Jornadas:");
 								for (JornadaDiaria jornada: jornadas)
-									System.out.println(jornada); //se imprimen las jornadas por cada médico para testear y saber si funciona correctamente el código
+									System.out.println(jornada); //se imprimen las jornadas por cada mï¿½dico para testear y saber si funciona correctamente el cï¿½digo
 							}
 							else
-								System.out.println("El medico no posee jornadas"); //si un médico no posee jornadas se avisa por pantalla para facilitar el testeo
+								System.out.println("El medico no posee jornadas"); //si un mï¿½dico no posee jornadas se avisa por pantalla para facilitar el testeo
 						}
 				}
 						break;
@@ -62,7 +61,7 @@ public class MainSecretaria {
 						for (ParMedicoTurnos par: pares) {
 							ArrayList<Turno> turnos = par.getTurnos();
 							for (Turno turno: turnos)
-								System.out.println(turno); //se imprimen todos los turnos (sin separar por médico ya que al imprimir el turno ya se avisa a cuál médico corresponde) para testear y saber si funciona correctamente el código
+								System.out.println(turno); //se imprimen todos los turnos (sin separar por mï¿½dico ya que al imprimir el turno ya se avisa a cuï¿½l mï¿½dico corresponde) para testear y saber si funciona correctamente el cï¿½digo
 						}	
 				}
 						break;
@@ -73,7 +72,7 @@ public class MainSecretaria {
 						for (ParMedicoTurnos par: pares) {
 							ArrayList<Turno> turnos = par.getTurnos();
 							for (Turno turno: turnos)
-								System.out.println(turno); //se imprimen todos los turnos (sin separar por médico ya que al imprimir el turno ya se avisa a cuál médico corresponde) para testear y saber si funciona correctamente el código
+								System.out.println(turno); //se imprimen todos los turnos (sin separar por mï¿½dico ya que al imprimir el turno ya se avisa a cuï¿½l mï¿½dico corresponde) para testear y saber si funciona correctamente el cï¿½digo
 						}
 				}
 						break;
