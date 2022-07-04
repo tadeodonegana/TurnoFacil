@@ -1,4 +1,4 @@
-# Documento de casos de testing | Sprint Nro 2
+# Documento de casos de testing | Sprint 2
 
 ## Descripcion:
         Descripción de la user story "Como Secretaria  quiero poder cargar días y horarios que trabajan los médicos para así poder cargar sus turnos"
